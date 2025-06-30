@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi/Satoshi-VariableItalic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::selection {
+  background-color: rgb(191, 191, 191);
+  color: #404040;
+}
+
+body {
+  margin: 0;
+  background-color: #171717;
+  color: rgb(191, 191, 191);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Satoshi, sans-serif;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+}
+body main h1 {
+  width: 100%;
+  text-align: center;
+}
+body main section {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+body main section label {
+  padding: 0 0 10px 10px;
+  opacity: 0.7;
+}
+body main section input {
+  background-color: rgba(26, 26, 26, 0.26);
+  text-decoration: none;
+  height: 2.6rem;
+  color: rgb(191, 191, 191);
+  padding: 0 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border: 1px solid rgba(191, 191, 191, 0.3);
+  border-radius: 10px;
+}
+body main section input :focus, body main section input :active, body main section input :hover {
+  border: none;
+  outline: none;
+}
+body main section .input-with-suffix {
+  position: relative;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+body main section .input-with-suffix input {
+  width: 100%;
+  background-color: rgba(26, 26, 26, 0.26);
+  color: rgb(191, 191, 191);
+  padding-right: 1.5rem;
+  border: 1px solid rgba(191, 191, 191, 0.3);
+  border-radius: 10px;
+  height: 2.6rem;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+body main section .input-with-suffix .mirror {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: transparent;
+  white-space: pre;
+  font-size: inherit;
+  font-family: inherit;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+body main section .input-with-suffix .suffix {
+  position: absolute;
+  top: 50%;
+  color: rgb(191, 191, 191);
+  opacity: 0.7;
+  user-select: none;
+  pointer-events: none;
+  transform: translateY(-50%);
+  font-size: inherit;
+  font-family: inherit;
+  left: calc(10px + var(--mirror-width, 0px));
+  z-index: 1;
+}
+body main .result {
+  width: 100%;
+  text-align: center;
+}
+body main .result #result {
+  font-size: 2rem;
+  font-weight: bold;
+}
+body footer {
+  margin-top: 2rem;
+  color: rgba(191, 191, 191, 0.5);
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: Satoshi, sans-serif;
+}
+body footer span {
+  color: #e25555;
+}
+
+/*# sourceMappingURL=style.css.map */

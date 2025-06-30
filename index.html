@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+</head>
+<body>
+    <main>
+        <h1>Compound Interest Calculator</h1>
+
+        <section>
+            <label for="initial">Initial Amount:</label>
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="numeric" pattern="[0-9]*" id="initial" value="10000" />
+        </section>
+
+        <section>
+            <label for="rate">Annual Interest Rate:</label>
+            <div class="input-with-suffix">
+                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="numeric" pattern="[0-9]*" id="rate" value="10" />
+                <span class="mirror"></span><span class="suffix">&nbsp;%</span>
+            </div>
+        </section>
+
+        <section>
+            <label for="times">Compounding Times Per Year:</label>
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="numeric" pattern="[0-9]*" id="times" min="1" value="1" />
+        </section>
+
+        <section>
+            <label for="years">Number of Years:</label>
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="numeric" pattern="[0-9]*" id="years" value="1" />
+        </section>
+
+        <section class="result">
+            <h3>Value after compounded interest:</h3>
+            <span id="result">11 000</span>
+        </section>
+    </main>
+
+    <footer>
+        Made with <span style="color: #e25555;">&hearts;</span> by elpideus
+    </footer>
+
+    <script src="assets/scripts/Main.js?v=3"></script>
+</body>
+</html>

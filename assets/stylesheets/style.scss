@@ -1,0 +1,145 @@
+@import "fonts";
+
+$text-color: rgb(191, 191, 191, 191);
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::selection {
+  background-color: $text-color;
+  color: invert($text-color);
+}
+
+body {
+  margin: 0;
+  background-color: #171717;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Satoshi, sans-serif;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+
+      label {
+        padding: 0 0 10px 10px;
+        opacity: .7;
+      }
+
+      input {
+        background-color: rgba(26, 26, 26, 0.26);
+        text-decoration: none;
+        height: 2.6rem;
+        color: $text-color;
+        padding: 0 10px;
+        font-size: 1.2rem;
+        outline: none;
+        border: 1px solid rgba($text-color, .3);
+        border-radius: 10px;
+
+        :focus, :active, :hover {
+          border: none;
+          outline: none;
+        }
+      }
+
+      .input-with-suffix {
+        position: relative;
+        width: 100%;
+        font-size: 1.2rem;
+        font-family: inherit;
+
+        input {
+          width: 100%;
+          background-color: rgba(26, 26, 26, 0.26);
+          color: $text-color;
+          padding-right: 1.5rem; // enough space for %
+          border: 1px solid rgba($text-color, .3);
+          border-radius: 10px;
+          height: 2.6rem;
+          outline: none;
+          font-size: inherit;
+          font-family: inherit;
+          box-sizing: border-box;
+          position: relative;
+          z-index: 2;
+        }
+
+        .mirror {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          color: transparent;
+          white-space: pre;
+          font-size: inherit;
+          font-family: inherit;
+          pointer-events: none;
+          user-select: none;
+          z-index: 1;
+        }
+
+        .suffix {
+          position: absolute;
+          top: 50%;
+          color: $text-color;
+          opacity: 0.7;
+          user-select: none;
+          pointer-events: none;
+          transform: translateY(-50%);
+          font-size: inherit;
+          font-family: inherit;
+          left: calc(10px + var(--mirror-width, 0px)); // dynamic position
+          z-index: 1;
+        }
+      }
+
+
+    }
+
+    .result {
+      width: 100%;
+      text-align: center;
+      #result {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 2rem;
+    color: rgb(191, 191, 191, 0.5);
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: Satoshi, sans-serif;
+
+    span {
+      color: #e25555; // red heart color
+    }
+  }
+
+
+}
